@@ -1,0 +1,525 @@
+/*@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400");*/
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    
+    box-sizing:border-box;
+    
+
+}
+body
+{
+    
+    background: #efefef;
+    color: #252525;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+    
+
+
+nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(0,0 , 0, 0.3);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+.nav-centre{
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    margin-right: auto;
+    margin-left: auto;
+}
+/*****************nav-left****************************/
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:50px ;
+    font-size: 20px;
+    color: #274d2c;
+}
+.nav-left .logo{
+    width: 40px;
+    margin: 5px 8px;
+    cursor: pointer;
+}
+
+
+
+.nav-left  img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    line-height: 45px;
+    margin-right: 16px;
+    margin-left: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*************************nav-centre*******************************/
+
+
+
+.nav-centre  img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    line-height: 45px;
+    margin-right: 16px;
+    margin-left: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nav-centre .search-box{
+    width: 330px;
+    height: 40px;
+    background: #efefef;
+    border-radius: 20px;
+    margin-left: 4px;
+    padding: 0 10px;
+    position: relative;
+}
+.nav-centre .search-box input{
+    width: 150px;
+    background:transparent;
+    outline: none;
+    border: 0;
+    margin-left: 4px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+}
+.nav-right img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    object-position: center;
+    line-height: 45px;
+    margin-right:40px;
+    margin-left: 20px;
+   /* border-radius: 50%;*/
+    cursor: pointer;
+}
+
+.nav-right i{
+    background: #efefef;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 8px;
+    font-size: 22px;
+    padding: 10px;
+    
+}
+.nav-right img:hover,
+.nav-right i:hover{
+    background: #9c9b9b;
+}
+
+/* menu */
+.card-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.open-menu{
+    max-height: 500px;
+
+}
+.card-menu{
+    width: 300px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.profile-menu{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0,0,0.3);
+    border-radius: 8px;
+    padding: 17px 0;
+    margin-bottom: 15px;
+
+}
+.profile-menu p{
+
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 16px;
+font-weight: 550px ;
+}
+.card-menu-items{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px 0;
+    color: #252525;
+    
+}
+.card-menu-items:hover{
+    background: #efefef;
+
+}
+.card-menu-items p{
+     width: 100%;
+     font-size: 15px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card-menu-items span{
+    font-size: 22px ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.profile-menu img,
+.card-menu-items img{
+    width: 30px;
+   
+    object-fit: cover;
+    object-position: center;
+   height: auto;
+    margin-right: px;
+    
+    cursor: pointer;
+
+}
+/**************************************/
+
+/*list of les choix  en left */
+
+.main {
+    display: flex;
+    margin-top: 60px;
+}
+/* left  party */
+
+
+.main-left::-webkit-scrollbar{
+    width: 7px;
+}
+.main-left::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #0b0a0a;
+}
+
+.main-left:hover::-webkit-scrollbar-thumb {
+    background: #c00808;
+}
+
+
+
+.main-left {
+    width: 170px; /* Largeur de la barre latérale */
+    height: 100%; /* Hauteur de la barre latérale */
+    background-color:#dde6ed; /* Couleur de fond */
+   
+
+    position: fixed; /* Positionnement fixe pour rester visible lors du défilement */
+    top: 0; /* Aligner en haut */
+    left: 0; /* Aligner à gauche */
+    padding-top: 60px; /* Espacement en haut pour éviter de cacher le haut de la page */
+    overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+    border-right: 1px solid #ccc; /* Bordure droite */
+    z-index: 100; /* Assurer que la barre latérale est au-dessus des autres contenus */
+}
+.main-left a {
+    text-decoration: none;
+    color: #100e0e; /* Couleur du texte */
+    display: flex;
+    align-items: center;
+}
+
+.main-left .img {
+    text-decoration: none;
+    color: #100e0e; /* Couleur du texte */
+    margin-bottom: 10px; /* Réduisez la marge en bas entre chaque lien */
+    display: flex;
+    align-items: center;
+    height: 40px; /* Hauteur des éléments */
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.main-left .img-out {
+    position: absolute; /* Positionner l'élément de façon absolue par rapport à son parent */
+    bottom: 0; /* Aligner l'élément en bas */
+    left: 0; /* Aligner l'élément à gauche */
+    width: 100%; /* Utiliser toute la largeur disponible */
+    background-color: #dde6ed; /* Couleur de fond */
+    color: #080707; /* Couleur du texte */
+    padding: 13px; /* Espacement intérieur */
+    text-align: center; /* Alignement du texte au centre */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    border-top: 1px solid #ffffff; /* Bordure supérieure */
+    z-index: 1; /* Assurer que l'élément est au-dessus des autres contenus */
+}
+
+
+
+.main-left .img img,
+.main-left .img-out img {
+    width: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+    margin-right: 10px; /* Marge à droite de l'icône */
+}
+
+.main-left .img p,
+.main-left .img-out p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+}
+.main-left .img i {
+    margin-right: 10px; /* Ajouter de l'espace entre l'icône et le texte */
+}
+
+.main-left .img:hover,
+.main-left .img-out:hover {
+    background: #27374d; /* Couleur de fond au survol */
+    color: #dde6ed;
+     /* Ajout de coins arrondis */
+}
+
+
+
+ /****************************************************************/
+ .container {
+    height: 10vh;
+     width: 40%;
+     
+         
+   }
+
+.table1 {
+    position: absolute; /* Définir la position absolue pour le tableau */
+    top: 170px; /* Définir la position verticale par rapport au haut de la page */
+    left: 30%; /* Définir la position horizontale à 50% de la largeur de la fenêtre */
+    transform: translateX(-50%); /* Centrer horizontalement le tableau */
+}
+.table2 {
+    position: absolute; /* Définir la position absolue pour le tableau */
+    top: 170px; /* Définir la position verticale par rapport au haut de la page */
+    right: 4%; /* Définir la position horizontale à 50% de la largeur de la fenêtre */
+    transform: translateX(-50%); /* Centrer horizontalement le tableau */
+}
+th, td {
+    border: 0px solid  #27374d;
+    padding: 0px;
+    text-align: left;
+}
+
+th {
+    background-color: #dde6ed ;
+
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+
+/*************************************************/
+/*apre recherche 
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 200px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: width 0.3s ease-in-out; /* Ajout de l'effet de transition 
+}
+*/
+/* Style pour la table */
+
+
+
+/*******************************/
+/* CSS pour les icônes d'édition et de suppression */
+/* CSS pour les icônes d'édition et de suppression */
+
+.table-joueur .fa-user-plus {
+    color: rgb(41, 41, 196); /* Couleur de l'icône d'édition */
+    
+}
+
+.table-joueur .fa-user-plus:hover {
+    color: rgb(12, 12, 70); /* Couleur de l'icône d'édition */
+    
+}
+
+.delete-icon {
+    color: rgb(236, 53, 53); /* Couleur de l'icône de suppression */
+}
+.delete-icon:hover {
+    color: rgb(183, 67, 67); /* Couleur de l'icône de suppression */
+}
+/********************************************************/
+
+.table-container {
+    width: 20%; /* Largeur de l'élément */
+    height: 150vh; /* Hauteur de l'élément */
+    position: absolute; /* Position absolue */
+    top: 0; /* Aligner en haut */
+    right: 0; /* Distance à partir du bord droit */
+    padding: 100px 0; /* Remplissage en haut et en bas */
+    overflow: hidden; /* Masquer le débordement */
+    overflow-y: scroll; /* Activer le défilement vertical si nécessaire */
+    background: #dde6ed;
+}
+
+
+.table-container img {
+    width: 150px; /* Largeur fixe de l'image */
+    height: 150px; /* Hauteur fixe de l'image */
+    display: block; /* Rendre l'image un élément de bloc */
+    margin: 30px auto; /* Ajouter une marge en bas pour séparer l'image du reste du contenu et centrer l'image horizontalement */
+    border-radius: 50%; /* Appliquer une bordure arrondie pour créer un cercle */
+    box-shadow: 30px 10px 10px rgba(0, 0, 0, 0.1); /* Ajouter une ombre légère autour de l'image */
+   /* border-bottom: 1px solid #ddd;*/
+}
+
+
+
+
+
+.infoclub {
+  /*  border-bottom: 1px solid #ddd;*/
+    margin: 50px auto;
+    width: 250px; /* Largeur fixe de l'image */
+    height: 180px;
+    text-align: right; /* Aligner le texte à droite */
+    /* Marge droite pour ajuster l'espacement */
+}
+
+.infoclub p {
+   /* border-bottom: 1px solid #ddd;*/
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 8px; /* Ajouter un remplissage pour l'espace entre les éléments */
+    text-align: left; /* Aligner le texte à gauche */
+  
+}
+
+/* Style pour la dernière ligne */
+.infoclub p:last-child {
+    border-bottom: none; /* Supprimer la bordure inférieure pour le dernier élément */
+}
+/******************************************/
+
+.main-centre {
+    width: 100%;
+    margin-left: 100%;
+    height: auto;
+    background: #f2f2f2;
+    border-radius: 10px;
+    padding: 40px 10px 0 10px;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+.title h1 {
+    
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right,rgb(9, 9, 231),#111111 35%,#b40606);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+}
+@keyframes gradient {
+    0% { background-position: 0% 75%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 70%; }
+}
+.title i {
+    position: absolute;
+    right: 0;
+    margin: 10px 30px;
+    color: #27374d;
+    cursor: pointer;
+}
+.main-skills-wrapper {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+}
+
+.main-skills {
+    display: flex;
+   /* Permettre le retour à la ligne des cartes */
+    justify-content: center; /* Centrer horizontalement */
+    margin-top: 20px;
+    margin-left: 60%;
+}
+
+.card {
+    flex: 0 0 auto; /* Empêcher le redimensionnement des cartes */
+    margin-right: 20px; /* Ajouter de l'espace entre les cartes */
+    background-color: #dde6ed;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.card p span {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card-icon,
+.fa-child-dress {
+    font-size: 40px;
+    color: #27374d;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

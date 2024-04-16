@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=wsap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'poppins';
+    background-color: #ecedef;
+    line-height: 1.8;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+#container{
+    margin: 30px auto;
+    max-width: 430px;
+    padding: 20px;
+}
+
+.wrapper
+{
+    background: #fff;
+    padding: 15px 25px;
+    color: #333;
+    border-top: 4px solid #3633df;
+    border-radius: 05px;
+}
+
+.wrapper h1,
+.wrapper h1{
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Adjust the maximum width of the form as needed */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Apply styles to fieldsets */
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Apply styles to labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.wrapper button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #3633df;
+    cursor: pointer;
+    border: 1px solid #3633df;
+    font-family: 'poppins';
+    font-size: 15px;
+    transition: 1s;
+}
+
+.wrapper button:hover{
+    transition: 1s;
+    background-color: #3633df;
+}

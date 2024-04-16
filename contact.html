@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styling.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AyvX26aW2/2ScJl/mOWTt6CxdN0lF5gjyUg1FxY6W8xkEiWfoPdJSF3SWzi4ImakUzFbvgYv1gjr5YkO6iK+gQ==" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <a href="#" class="menu-icon" onclick="toggleDropdown();"><i class="fas fa-bars" style="color: #3f99de;"></i></a>
+        <a href="#" class="logo"><span>S</span>ports</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navbar">
+            <li><a href="index2.html" onclick="toggleMenu()">
+                <i class="fas fa-home"></i>
+               Back Home</a></li>
+            
+
+        </ul>
+        <a href="connect.php" class="btn-sign" onclick="toggleMenu();"><i class="fa fa-user-circle fa-2x" style="color: #4722ec;"></i></a>
+
+    </header>
+    
+    <div id="dropdown-menu" class="dropdown-menu">
+        <div class="dropdown-minimenu">
+         <h3>club1</h3>
+            <ul>
+                <li> hhdbjd</li>
+                <li> skljsjnx</li>
+                <li> sjdsndj</li>
+                
+            </ul>
+
+        </div> 
+        <div class="dropdown-minimenu">
+            <h3>club1</h3>
+               <ul>
+                   <li> hhdbjd</li>
+                   <li> skljsjnx</li>
+                   <li> sjdsndj</li>
+                   
+               </ul>
+   
+           </div>    
+           <div class="dropdown-minimenu">
+            <h3>club1</h3>
+               <ul>
+                   <li> hhdbjd</li>
+                   <li> skljsjnx</li>
+                   <li> sjdsndj</li>
+                   
+               </ul>
+   
+           </div>    
+           <div class="dropdown-minimenu">
+            <h3>club1</h3>
+               <ul>
+                   <li> hhdbjd</li>
+                   <li> skljsjnx</li>
+                   <li> sjdsndj</li>
+                   
+               </ul>
+   
+           </div>       
+    </div>
+    
+    <section class="contact" id="contact">
+        <div class="contactform">
+            <p>Please send us your request with the following form and we will get in touch with you:</p>
+            <form method="POST" class="contact-form">
+                <input type="text" class="name" placeholder="Enter Name">
+                <input type="email" class="email" placeholder="Enter Email">
+                <textarea placeholder="Enter Message" class="message" id="message" cols="30" rows="10"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+     
+    <footer>
+        <div class="container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#values">Our Values</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        const form = document.querySelector(".contact-form");
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            let name = document.querySelector(".name").value;
+            let email = document.querySelector(".email").value;
+            let message = document.querySelector(".message").value;
+    
+            document.querySelector(".contact-form").reset();
+    
+            sendEmail(name, email, message);
+        });
+        function sendEmail(name, email, message) {
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "imanhenchi5@gmail.com",
+        Password:"5D11262DEFF4E59AB28F050FFA9698EAE1C4" ,
+        To: "imanhenchi5@gmail.com",
+        From: "imanhenchi5@gmail.com",
+        Subject: `${name} Just messaged you from the website form`,
+        Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message} <br>`,
+    }).then((success) => {
+        alert("Message sent successfully. Please check the spam folder in your mail.");
+    }).catch((error) => {
+        alert("Error sending message");
+    });
+}
+
+    </script>
+</body>
+</html>

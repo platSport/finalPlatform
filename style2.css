@@ -1,0 +1,786 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color:#000;
+}
+/* réglege de les boton */
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 10px 5px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+    background:linear-gradient(45deg,#fa0c04,#eef0f2)
+    
+
+}
+.btn-sign {
+    position: absolute; /* Position absolue par rapport à son premier parent positionné */
+    top: 50%; /* Positionner l'élément au milieu de la hauteur de son conteneur parent */
+    right: 20px; /* Distance de 20px depuis le bord droit de son conteneur parent */
+    transform: translateY(-50%); /* Déplacer l'élément de 50% de sa propre hauteur vers le haut pour le centrer verticalement */
+    text-align: right; /* Alignement du contenu vers la droite */
+}
+.btn-sign i {
+    display: inline-block; /* Définir l'icône en tant qu'élément en ligne */
+}
+
+.logo{
+    color: rgb(48, 60, 236);
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+.logo span{
+    color:rgb(48, 60, 236);
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+    
+}
+.navbar li{
+    list-style: none;
+    
+}
+/*reglage button header*/
+.navbar a{
+    color:rgb(48, 60, 236);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+
+
+header .navbar li a:hover{
+    color: rgb(214, 31, 31); /*colere button heaher on click*/
+    border-bottom: 2px solid rgb(17, 28, 151); /*la ligne sous le mot de button*/
+}
+
+
+/*premier page*/
+.banniere {
+    
+        position: relative;
+        min-height: 100vh;
+    
+    
+}
+
+.banniere video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banniere .contenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.banniere .contenu h1 {
+    color: black;
+    font-size: 3em;
+    /* Add any additional styling you want for the text */
+}
+
+.btn {
+    /* Style for the buttons */
+    background-color: #007bff; /* Example background color */
+    color: white; /* Example text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Add any additional styling you want for the buttons */
+}
+
+.btn.left {
+    /* Specific styling for the left button */
+    margin-right: 10px; /* Example margin */
+}
+
+.btn.right {
+    /* Specific styling for the right button */
+    margin-left: 10px; /* Example margin */
+}
+
+
+
+.menu-icon {
+    text-align: left; /* Alignement du contenu vers la droite */
+    position: absolute; /* Position absolue par rapport à son premier parent positionné */
+    top: 50%; /* Positionner l'élément au milieu de la hauteur de son conteneur parent */
+    left: 20px ; /* Distance de 20px depuis le bord droit de son conteneur parent */
+    transform: translateY(-50%); /* Déplacer l'élément de 50% de sa propre hauteur vers le haut pour le centrer verticalement */
+}
+
+.menu-icon i{
+    display: inline-block; /* Définir l'icône en tant qu'élément en ligne */
+}
+.banniere .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    background-color: transparent; /* Ajoutez cette ligne pour rendre le fond des boutons transparent */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 0; /* Ajustez le z-index pour placer les boutons derrière la photo */
+    transition: transform 0.3s ease; /* Ajoutez une transition d'animation pour le bouton */
+}
+
+.banniere .btn.left {
+    left: 100px; /* espacement à gauche */
+}
+
+.banniere .btn.right {
+    right: 100px; /* espacement à droite */
+}
+
+.dropdown-menu {
+    display: none; /* Masquer le menu déroulant par défaut */
+    position: fixed; /* Position fixe pour couvrir la taille de l'écran */
+    top: 55px; /* Distance du haut */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+    z-index: 9999; /* Assurez-vous que le menu déroulant est au-dessus de tout autre contenu */
+    /*text-align: center; /* Centrer le contenu */
+    padding-top: 50px; /* Ajouter un espacement au-dessus du contenu */
+    
+    
+}
+.dropdown-minimenu{
+    flex-basis: 40%; /*distance */
+}
+.dropdown-minimenu h3{
+    padding: 7px;
+}
+.dropdown-minimenu ul li{
+    list-style: none;
+    padding: 10px;
+}
+/*2eme page*/
+section{
+    padding: 100px;
+    background-color: rgb(241, 238, 238);
+}
+.row{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50{
+    position: relative;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row .col50 h2{
+    margin-bottom: 20px;
+}
+
+.titre-texte{
+    color: rgb(17, 28, 151);
+    font-size: 1.5em;
+    font-weight: 300px;
+    text-transform: capitalize;
+}
+
+.titre-texte span{
+    color: rgb(214, 31, 31);
+    font-size: 1.5em;
+    font-weight: 700px;
+}
+
+.row .col50 img {
+    height: 550px;
+    width: 600px;
+    position: relative;
+   /* border: 0.5px solid rgb(17, 28, 151); /* Ajouter une bordure  */
+    box-shadow: 20px 15px 35px rgb(77, 36, 44);
+    border-radius: 50%;
+    top: 2px;
+}
+
+.titre{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.expert{
+    margin-top:-100px;
+}
+
+.expert .contenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.expert .contenu .box{
+    width: 250px;
+    margin: 15px;
+}
+.expert .contenu .box img{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.expert .contenu .box h3{
+    color: #111;
+    font-weight: 400;
+    text-align: center;
+
+}
+/*3eme page*/
+.menu{
+    margin-top: -100px;
+}
+
+.menu .contenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .contenu .box {
+    width: calc(33.33% - 40px); /* Calcule la largeur de chaque boîte pour qu'il y ait 3 boîtes par ligne */
+    margin: 20px;
+    box-sizing: border-box; /* Inclure les bordures et les marges dans le calcul de la largeur */
+   
+}
+
+.menu .contenu .box .imbox{
+    position: relative;
+    width: 100%;
+    height: 200px; /* Réduire la hauteur pour s'adapter à trois images côte à côte */
+   
+
+}
+
+.menu .contenu .box .imbox img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+.menu .contenu .box .imbox img:hover {
+    transform: scale(1.1); /* Par exemple, agrandit légèrement l'image au survol */
+}
+.menu .contenu .box .text{
+    text-align: center;
+    font-weight: 300px;
+    height: 40px;
+    color: rgb(17, 28, 151);
+}
+
+.menu .contenu .box .text h3{
+    font-weight: 400;
+}
+
+/*4eme page*/
+.contact{
+    height: 700px; 
+    background-size: cover;
+    box-shadow: 2px 2px 7px rgba(0,0,0, 0.8);
+    width: 100%;
+    background-position: unset;
+}
+
+.contactform{
+    padding: 20px 50px;
+    background:rgb(243, 240, 241);
+    box-shadow: 5px 15px 50px  rgb(77, 36, 44);
+    max-width: 500px;
+    margin-top: 5px; /*  déplacer vers le haut */
+    justify-content: center;
+    align-items: center;
+    margin-left: 38%;
+    
+}
+
+.contactform h3{
+    color: #111;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.icons {
+    margin-right: 100%;
+    margin-top: 400px;
+    width: auto; /* Vous pouvez ajuster la largeur selon vos besoins */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+}
+
+.icons i {
+    font-size: 30px;
+    color: rgb(4, 4, 216);
+    margin-right: 20px; /* Augmentez cette valeur pour ajouter plus d'espace */
+    display: inline-block;
+}
+input,
+textarea{
+width: 100%;
+padding: 6px;
+outline: none;
+border: none;
+margin:6px 0px ;
+background-color: rgb(255, 255, 255);
+/* border: 0.5px solid rgb(17, 28, 151); /* Ajouter une bordure  */
+box-shadow: 20px 15px 35px rgb(77, 36, 44);
+}
+.contactform [type="submit"]{
+   padding: 15px;
+   background:  rgb(255, 255, 255);
+   color: #0e0101;
+   font-size: 18px;
+   border: 0;
+   outline: none;
+   cursor: pointer; 
+   width: 150px;
+   margin: 20px auto 0;
+   border-radius: 30px;
+   
+
+   
+}
+.contactform [type="submit"]:hover{
+    color: #dd0f0f;
+}
+.contactform h3{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    
+}
+
+
+
+/*la bonde de botton*/
+header.sticky{
+    background:rgb(241, 238, 238);
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+}
+
+header.sticky .logo{
+    color: rgb(17, 28, 151);
+}
+
+header.sticky .navbar li a {
+    color: rgb(214, 31, 31);
+}
+
+header.sticky li a:hover{
+    color:rgb(17, 28, 151);
+    border-bottom: 2px solid ;
+}
+/*reglege de tlf */
+@media (max-width: 991px) {
+header, header.sticky{
+    padding: 10px 20px;
+}
+
+header .navbar li{
+    margin-left: 0px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color:black;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.navbar{
+    display: none;
+}
+section{
+    padding: 20px;
+}
+
+header .navbar.active{
+    width: 100%;
+    height: calc(100% -68px);
+    position: fixed;
+    top: 68px;
+    left:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffff;
+    align-items: center;
+}
+
+.menuToggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(./images/HOME.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 30px;
+}
+
+.menuToggle.active
+{
+   /* background-image: url(./images/3bd75ad62bbb35e8b1a25c286b168d25.jpg);*/
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-origin: center;
+}
+
+header.sticky .menuToggle{
+    filter: invert(1);
+}
+
+
+.banniere .contenu h2{
+    font-size: 2em;
+}
+
+.row .col50 img{
+    margin-left: 18%;
+}
+
+.contenu p:nth-child(2){
+    font-size: 1,2em;
+}
+.expert{
+    margin-top: 0px;
+}
+
+.menu{
+    margin-top: 0px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.contactform{
+    margin-left: 25%;
+}
+
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    
+    }
+
+    .row{
+        flex-direction: column;
+    }
+}
+.copyright{
+    padding: 20px 40px;
+    border-top: 2px solid rgba(0,0,0, 0.1);
+    background: rgb(243, 240, 241);
+    text-align: center;
+}
+
+.copyright p:nth-child(1){
+    color: #0f0404;
+}
+
+.copyright span {
+    color: rgb(189, 5, 42);
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}
+@media (max-width: 480px)
+{
+    .banniere .contenu h2{
+        font-size: 2.2em;
+        color: #f7efef;
+    }
+
+    .titre-text{
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignage h2 
+    {
+        font-size: 1.1em;
+    }
+
+    .temoignage p{
+        text-align: center;
+    }
+}
+
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    right: 0; /* Position the submenu to the right instead of left */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    z-index: 1000;
+    display: none; /* Hide submenu by default */
+}
+
+
+/* Show the submenu on hover */
+.navbar li:hover .submenu {
+    display: block;
+}
+
+/* Style the language menu */
+.language-menu {
+    padding: 10px;
+    text-align: right; /* Align language menu content to the right */
+}
+
+/* Style the language dropdown within the submenu */
+.submenu select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    width: 150px; /* Adjust width as needed */
+}
+
+/* Align the main menu to the right */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Align menu items to the right */
+}
+/*fb insta ...*/
+:root {
+    --facebook: rgb(17, 28, 151);
+    --twitter: hsl(0, 0%, 0%);
+    --instagram: hsl(338, 72%, 55%);
+}
+
+.resaux {
+    position: absolute;
+    bottom: 20px; /* Adjust this value to change the vertical position */
+    right: 70%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    top: 75%;
+}
+.resaux a{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    position: relative;
+    box-shadow: -5px 5px 10px rgb(18, 18, 18);
+    transition: 0.6s all ease-in-out;
+    margin-right: 20px; /* Ajouter de l'espace entre les icônes */
+    transform: translateY(180%); /* Déplacer l'élément de 50% de sa propre hauteur vers le haut pour le centrer verticalement */
+
+}
+
+.resaux a svg {
+    width: 20px;
+    height: 20px;
+}
+
+ .resaux a svg path,
+a svg circle {
+    transition: 0.3s all ease-in-out;
+}
+
+.resaux a span {
+    position: absolute;
+    color: #f3ebeb;
+    transform: translateY(0px);
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 0s;
+}
+
+.resaux a span::before {
+    position: absolute;
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.resaux a.facebook span {
+    background-color: var(--facebook);
+}
+
+.resaux a.facebook span::before {
+    border-top-color: var(--facebook);
+}
+
+.resaux a.twitter span {
+    background-color: var(--twitter);
+}
+
+.resaux a.twitter span::before {
+    border-top-color: var(--twitter);
+}
+
+.resaux a.linkedin span {
+    background-color: var(--linkedin);
+}
+
+.resaux a.linkedin span::before {
+    border-top-color: var(--linkedin);
+}
+
+.resaux a.instagram span {
+    background-color: var(--instagram);
+}
+
+.resaux a.instagram span::before {
+    border-top-color: var(--instagram);
+}
+
+
+
+.resaux a.facebook:hover {
+    background-color: var(--facebook);
+}
+
+.resaux a.twitter:hover {
+    background-color: var(--twitter);
+}
+
+.resaux a.linkedin:hover {
+    background-color: var(--linkedin);
+}
+
+.resaux a.instagram.active,
+a.instagram:hover {
+    background-color: var(--instagram);
+}
+
+.resaux a.active span,
+a:hover span {
+    transform: translateY(-80px);
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.resaux a.active svg path,
+a.active svg circle,
+a:hover svg path,
+a:hover svg circle {
+    fill: #fff;
+}
+.img img {
+    width: 100%;
+    height: auto;
+}
+footer {
+    background-color: hwb(218 1% 71%); /* Blue background color */
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
